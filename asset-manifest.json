@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/aircraft-problem/static/css/main.6168f6af.chunk.css",
+    "main.js": "/aircraft-problem/static/js/main.51ea56e5.chunk.js",
+    "main.js.map": "/aircraft-problem/static/js/main.51ea56e5.chunk.js.map",
+    "runtime-main.js": "/aircraft-problem/static/js/runtime-main.4ccba7fb.js",
+    "runtime-main.js.map": "/aircraft-problem/static/js/runtime-main.4ccba7fb.js.map",
+    "static/js/2.21dbdb0a.chunk.js": "/aircraft-problem/static/js/2.21dbdb0a.chunk.js",
+    "static/js/2.21dbdb0a.chunk.js.map": "/aircraft-problem/static/js/2.21dbdb0a.chunk.js.map",
+    "static/js/3.088920e5.chunk.js": "/aircraft-problem/static/js/3.088920e5.chunk.js",
+    "static/js/3.088920e5.chunk.js.map": "/aircraft-problem/static/js/3.088920e5.chunk.js.map",
+    "index.html": "/aircraft-problem/index.html",
+    "static/css/main.6168f6af.chunk.css.map": "/aircraft-problem/static/css/main.6168f6af.chunk.css.map",
+    "static/js/2.21dbdb0a.chunk.js.LICENSE.txt": "/aircraft-problem/static/js/2.21dbdb0a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4ccba7fb.js",
+    "static/js/2.21dbdb0a.chunk.js",
+    "static/css/main.6168f6af.chunk.css",
+    "static/js/main.51ea56e5.chunk.js"
+  ]
+}
