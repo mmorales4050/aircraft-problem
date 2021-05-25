@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 
 function AircraftQueue() {
 
+  // One array is defined for each type and size of aircraft
+  // This solution is designed to work for a large number of aircrafts
+  // These 4 arrays prevent the need to search any portion of a large queue
   const [largePassenger, setLargePassenger] = useState([]);
   const [smallPassenger, setSmallPassenger] = useState([]);
   const [largeCargo, setLargeCargo] = useState([]);
   const [smallCargo, setSmallCargo] = useState([]);
 
+  // An ID is given to each aircraft to differentiate between different aircrafts of the same size and type
   const [aircraftID, setAircraftID] = useState(0);
 
   const [selected, setSelected] = useState({
@@ -18,6 +22,7 @@ function AircraftQueue() {
 
   const [systemOn, setSystemOn] = useState(false);
 
+  // On system boot the queue is cleared off all aircrafts
   const bootSystem = (event) => {
     setLargeCargo([])
     setSmallPassenger([])
@@ -42,8 +47,11 @@ function AircraftQueue() {
     })
   }
 
+  // When an aircraft is queued it will be seperated by priority so that it is clear when it should be dequeued
   const queueAircraft = (event) => {
     if (selected.size == "large" && selected.type == "passenger") {
+      // Each array stores each aircraft's unqiue ID in the order that it is queued
+      // Aircrafts with higher priority are first in the array
       setLargePassenger([...largePassenger, aircraftID])
     } else if (selected.size == "small" && selected.type == "passenger") {
       setSmallPassenger([...smallPassenger, aircraftID])
@@ -52,9 +60,12 @@ function AircraftQueue() {
     } else if (selected.size == "small" && selected.type == "cargo") {
       setSmallCargo([...smallCargo, aircraftID])
     }
+    // A unique ID is given to each aircraft when it is queued
     setAircraftID(aircraftID + 1)
   }
 
+  // When an aircraft is dequeued each array will be checked in order of priority
+  // This method will not increase in difficulty or run time when there are a large number of aircrafts enqueue
   const dequeueAircraft = (event) => {
     if (largePassenger.length > 0) {
       setDequeued({
